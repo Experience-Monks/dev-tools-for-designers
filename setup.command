@@ -39,8 +39,11 @@ else
 fi
 
 #Github Desktop install
-curl -O https://mac-installer.github.com/mac/GitHub%20Desktop%20216.zip
-unzip GitHub%20Desktop%20216.zip
-#cp "GitHub Desktop.app" /Applications/
+#curl -O https://mac-installer.github.com/mac/GitHub%20Desktop%20216.zip
+#unzip GitHub%20Desktop%20216.eip
+brew install wget
+wget --content-disposition -E -c https://central.github.com/mac/latest -O githubInstaller.zip
+unzip githubInstaller.zip
+
 echo "Launching Github Installer"
 open "GitHub Desktop.app"
