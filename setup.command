@@ -16,8 +16,7 @@ else
 	echo "Setting up local account."	
 	mkdir ~/.npm-global
 	npm config set prefix '~/.npm-global'
-	printf "export PATH=~/.npm-global/bin:$PATH" >> ~/.bash_profile
-	source ~/.bash_profile
+	NPM=~/.npm-global/bin
 fi
 #Sublime installation - version 2.0.2
 mkdir /Volumes/mnt
@@ -30,13 +29,28 @@ if hdiutil  attach -mountpoint /Volumes/mnt Sublime%20Text%202.0.2.dmg; then
 	rm Sublime%20Text%202.0.2.dmg
 
 	mkdir ~/bin
-	printf "export PATH=~/bin:$PATH" >> ~/.bash_profile
-	source ~/.bash_profile
+	BIN=~/bin
 
 	ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 else
 	echo "Sublime mount failed"
 fi
+
+#SET PATH
+if [ -z $NPM ]; then 
+	echo "npm path is not set"
+else
+	echo "npm path set succesfully"
+fi
+if [ -z $BIN ]; then
+	echo "subl not set"
+else
+	echo "subl command set"
+fi
+
+# '>>' output just in case there is something in the profile
+printf "export PATH=%s:%s:$PATH" $NPM $BIN >> ~/.bash_profile
+source ~/.bash_profile
 
 #Github Desktop install
 #curl -O https://mac-installer.github.com/mac/GitHub%20Desktop%20216.zip
