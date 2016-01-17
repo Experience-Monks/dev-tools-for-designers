@@ -7,7 +7,7 @@ Additionally it will allow you to launch Sublime through the command 'subl'
 ## 1
 Download the files as a zip. Unzip it and look for the dev-setup.app file and click to launch.
 
-![1](https://raw.githubusercontent.com/nascherman/my-pics/master/screen9.png?token=AIlKQR2jzXKr2XiKXKwzsppHSq8VJn6Vks5Wn_GgwA%3D%3D)
+![1](https://raw.githubusercontent.com/nascherman/my-pics/master/screen9.png)
 
 ## 2
 The script will launch a terminal window, watch for the password prompt
@@ -25,8 +25,8 @@ Press RETURN to continue or any other key to abort
 During the install, you will be prompted by a popup to install xcrun. Click install and wait for it to complete
 then press enter in the terminal window to continue the installation
 
-![3](https://raw.githubusercontent.com/nascherman/my-pics/master/screen1.png?token=AIlKQSG5mW5LMyQfErIM8Mf7uqgCKTygks5WmAyHwA%3D%3D)
+![3](https://raw.githubusercontent.com/nascherman/my-pics/master/screen1.png)
 
-## 6
+## 4
 
 Finally, the github desktop install will popup and you can install as normal.
